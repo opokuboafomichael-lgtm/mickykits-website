@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micky Kits | Premium Jerseys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0d0f12',
+                        darkCard: '#13171e',
+                        electricBlue: '#00E5FF',
+                        premiumGold: '#D4AF37',
+                        customHighlight: '#38bdf8'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Segoe UI', 'system-ui', '-apple-system', 'sans-serif'],
+                        heading: ['Bebas Neue', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Modern Base Overrides */
+        * {
+            box-sizing: border-box;
+        }
+        /* Smooth transitions for locker room hover effects */
+        .jersey-card .jersey-img {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .jersey-card:hover .jersey-img {
+            transform: scale(1.04) translateY(-4px);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0f12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-white font-sans antialiased selection:bg-electricBlue selection:text-black">
+
+    <header class="sticky top-0 z-50 bg-[#13171e]/80 backdrop-blur-md border-b border-white/5 px-4 lg:px-8 py-4 flex justify-between items-center">
+        <a href="#" class="font-heading text-3xl tracking-wider text-white">MICKY <span class="text-premiumGold">KITS</span></a>
+        <nav class="hidden md:flex space-x-8 font-semibold tracking-wide text-sm uppercase">
+            <a href="#home" class="text-neutral-400 hover:text-white transition">Home</a>
+            <a href="#collection" class="text-neutral-400 hover:text-white transition">Collection</a>
+            <a href="#custom-studio" class="hover:text-premiumGold transition text-premiumGold">Custom Studio</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <a href="tel:0257656450" class="hidden sm:inline-block text-xs border border-white/10 px-3 py-1.5 rounded-full hover:border-electricBlue transition">
+                <i class="fa-solid fa-phone mr-1 text-electricBlue"></i> Support
+            </a>
+            <button type="button" class="text-xl hover:text-electricBlue"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button type="button" class="text-xl hover:text-electricBlue relative">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="absolute -top-2 -right-2 bg-electricBlue text-black font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="relative min-h-[75vh] flex flex-col justify-center items-center bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-slate-900/50 via-darkBg to-darkBg px-4 overflow-hidden border-b border-white/5">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1500')] bg-cover bg-center mix-blend-overlay"></div>
+        
+        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-6 pt-12">
+            <span class="text-electricBlue tracking-[0.3em] font-bold text-xs uppercase block">Engineered for the Elite</span>
+            <h1 class="font-heading text-6xl sm:text-8xl lg:text-9xl tracking-tight leading-none text-white">
+                SELECT YOUR <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400">KIT</span>
+            </h1>
+            <p class="text-neutral-400 max-w-xl mx-auto text-sm sm:text-base font-light">
+                Premium quality football jerseys. Experience match-ready textures and authentic typography. Choose plain or add your own custom details.
+            </p>
+            <div class="pt-4 flex flex-wrap justify-center gap-4">
+                <a href="#collection" class="bg-white text-darkBg font-bold tracking-wider uppercase px-8 py-4 text-sm hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                    Explore Collection
+                </a>
+                <a href="#custom-studio" class="border border-premiumGold text-premiumGold font-bold tracking-wider uppercase px-8 py-4 text-sm hover:bg-premiumGold hover:text-black transition-all">
+                    Customize Studio
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 relative z-10 px-4">
+            <div class="bg-darkCard/50 border border-white/5 p-6 flex items-center space-x-4 backdrop-blur-sm rounded-xl">
+                <div class="text-premiumGold text-3xl"><i class="fa-solid fa-crown"></i></div>
+                <div>
+                    <h3 class="font-heading text-xl tracking-wider">AFFORDABLE PRICING</h3>
+                    <p class="text-xs text-neutral-400">Premium heavy-knit builds without the luxury markup.</p>
+                </div>
+            </div>
+            <div class="bg-darkCard/50 border border-white/5 p-6 flex items-center space-x-4 backdrop-blur-sm">
+                <div class="text-electricBlue text-3xl"><i class="fa-solid fa-truck-fast"></i></div>
+                <div>
+                    <h3 class="font-heading text-xl tracking-wider">DELIVERY AVAILABLE</h3>
+                    <p class="text-xs text-neutral-400">Fast, secure shipping nationwide across Ghana.</p>
+                </div>
+            </div>
+            <div class="bg-darkCard/50 border border-white/5 p-6 flex items-center space-x-4 backdrop-blur-sm rounded-xl">
+                <div class="text-emerald-400 text-3xl"><i class="fa-brands fa-whatsapp"></i></div>
+                <div>
+                    <h3 class="font-heading text-xl tracking-wider">2-CLICK WHATSAPP CHECKOUT</h3>
+                    <p class="text-xs text-neutral-400">Instantly route orders straight to our execution hub.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="collection" class="py-20 px-4 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-white/5 pb-6">
+            <div>
+                <span class="text-premiumGold text-xs uppercase font-bold tracking-widest block mb-2">// CURATED STYLES</span>
+                <h2 class="font-heading text-4xl sm:text-5xl tracking-wide">THE JERSEY ARCHIVE</h2>
+            </div>
+            <p class="text-neutral-400 text-sm max-w-xs mt-4 md:mt-0">
+                Premium club and international armatures. Select a kit size below to initialize quick checkout.
+            </p>
+        </div>
+<div class="jersey-card bg-darkCard border border-white/5 p-6 rounded-2xl relative group flex flex-col justify-between transition-all duration-300 hover:border-white/10 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                <div>
+                    <div class="h-80 w-full flex items-center justify-center relative overflow-hidden bg-[#1a1f26] rounded-xl border border-white/5">
+                        <img id="rm-img" src="brazil.jpg" class="jersey-img object-contain h-72 w-full p-4" alt="Real Madrid Jersey">
+                    </div>
+                    <h3 class="font-heading text-2xl tracking-wide mt-4">Real Madrid Kit</h3>
+                    
+                    <div class="bg-white/5 border border-white/5 rounded-xl p-3 my-4 space-y-2">
+                        <div class="flex justify-between items-center text-sm text-neutral-400">
+                            <span>Standard Plain</span>
+                            <span class="font-semibold text-white">₵150</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm pt-2 border-t border-dashed border-white/5 text-neutral-400">
+                            <span>With Customization</span>
+                            <span class="font-semibold text-customHighlight">₵180</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <select id="rm-size" class="w-full bg-[#0d0f12] border border-white/10 rounded-xl p-3 text-xs focus:border-electricBlue text-white outline-none">
+                        <option value="S">Size S</option>
+                        <option value="M" selected>Size M</option>
+                        <option value="L">Size L</option>
+                        <option value="XL">Size XL</option>
+                    </select>
+                    <button type="button" onclick="orderViaWhatsApp('Real Madrid Kit', 'rm-size')" class="w-full bg-white hover:bg-neutral-200 text-darkBg font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                        <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i>
+                        <span>Place Order</span>
+                    </button>
+                </div>
+            </div>
+
+<div class="jersey-card bg-darkCard border border-white/5 p-6 rounded-2xl relative group flex flex-col justify-between transition-all duration-300 hover:border-white/10 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                <div>
+                    <div class="h-80 w-full flex items-center justify-center relative overflow-hidden bg-[#1a1f26] rounded-xl border border-white/5">
+                        <img id="rm-img" src="liverpool.jpg" class="jersey-img object-contain h-72 w-full p-4" alt="Real Madrid Jersey">
+                    </div>
+                    <h3 class="font-heading text-2xl tracking-wide mt-4">Real Madrid Kit</h3>
+                    
+                    <div class="bg-white/5 border border-white/5 rounded-xl p-3 my-4 space-y-2">
+                        <div class="flex justify-between items-center text-sm text-neutral-400">
+                            <span>Standard Plain</span>
+                            <span class="font-semibold text-white">₵150</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm pt-2 border-t border-dashed border-white/5 text-neutral-400">
+                            <span>With Customization</span>
+                            <span class="font-semibold text-customHighlight">₵180</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <select id="rm-size" class="w-full bg-[#0d0f12] border border-white/10 rounded-xl p-3 text-xs focus:border-electricBlue text-white outline-none">
+                        <option value="S">Size S</option>
+                        <option value="M" selected>Size M</option>
+                        <option value="L">Size L</option>
+                        <option value="XL">Size XL</option>
+                    </select>
+                    <button type="button" onclick="orderViaWhatsApp('Real Madrid Kit', 'rm-size')" class="w-full bg-white hover:bg-neutral-200 text-darkBg font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                        <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i>
+                        <span>Place Order</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="jersey-card bg-darkCard border border-white/5 p-6 rounded-2xl relative group flex flex-col justify-between transition-all duration-300 hover:border-white/10 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                <div>
+                    <div class="h-80 w-full flex items-center justify-center relative overflow-hidden bg-[#1a1f26] rounded-xl border border-white/5">
+                        <img id="cfc-img" src="chelsea.jpg" class="jersey-img object-contain h-72 w-full p-4" alt="Chelsea Jersey">
+                    </div>
+                    <h3 class="font-heading text-2xl tracking-wide mt-4">Chelsea Kit</h3>
+                    
+                    <div class="bg-white/5 border border-white/5 rounded-xl p-3 my-4 space-y-2">
+                        <div class="flex justify-between items-center text-sm text-neutral-400">
+                            <span>Standard Plain</span>
+                            <span class="font-semibold text-white">₵150</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm pt-2 border-t border-dashed border-white/5 text-neutral-400">
+                            <span>With Customization</span>
+                            <span class="font-semibold text-customHighlight">₵180</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <select id="cfc-size" class="w-full bg-[#0d0f12] border border-white/10 rounded-xl p-3 text-xs focus:border-electricBlue text-white outline-none">
+                        <option value="S">Size S</option>
+                        <option value="M" selected>Size M</option>
+                        <option value="L">Size L</option>
+                        <option value="XL">Size XL</option>
+                    </select>
+                    <button type="button" onclick="orderViaWhatsApp('Chelsea Kit', 'cfc-size')" class="w-full bg-white hover:bg-neutral-200 text-darkBg font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                        <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i>
+                        <span>Place Order</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="jersey-card bg-darkCard border border-white/5 p-6 rounded-2xl relative group flex flex-col justify-between transition-all duration-300 hover:border-white/10 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                <div>
+                    <div class="h-80 w-full flex items-center justify-center relative overflow-hidden bg-[#1a1f26] rounded-xl border border-white/5">
+                        <img id="gh-img" src="ghana.jpg" class="jersey-img object-contain h-72 w-full p-4" alt="Ghana National Kit">
+                    </div>
+                    <h3 class="font-heading text-2xl tracking-wide mt-4">Ghana National Kit</h3>
+                    
+                    <div class="bg-white/5 border border-white/5 rounded-xl p-3 my-4 space-y-2">
+                        <div class="flex justify-between items-center text-sm text-neutral-400">
+                            <span>Standard Plain</span>
+                            <span class="font-semibold text-white">₵150</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm pt-2 border-t border-dashed border-white/5 text-neutral-400">
+                            <span>With Customization</span>
+                            <span class="font-semibold text-customHighlight">₵180</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <select id="gh-size" class="w-full bg-[#0d0f12] border border-white/10 rounded-xl p-3 text-xs focus:border-electricBlue text-white outline-none">
+                        <option value="S">Size S</option>
+                        <option value="M">Size M</option>
+                        <option value="L" selected>Size L</option>
+                        <option value="XL">Size XL</option>
+                    </select>
+                    <button type="button" onclick="orderViaWhatsApp('Ghana National Kit', 'gh-size')" class="w-full bg-white hover:bg-neutral-200 text-darkBg font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                        <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i>
+                        <span>Place Order</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="jersey-card bg-darkCard border border-white/5 p-6 rounded-2xl relative group flex flex-col justify-between transition-all duration-300 hover:border-white/10 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                <div>
+                    <div class="h-80 w-full flex items-center justify-center relative overflow-hidden bg-[#1a1f26] rounded-xl border border-white/5">
+                        <img id="rm-img" src="barcelona.jpg" class="jersey-img object-contain h-72 w-full p-4" alt="Real Madrid Jersey">
+                    </div>
+                    <h3 class="font-heading text-2xl tracking-wide mt-4">Real Madrid Kit</h3>
+                    
+                    <div class="bg-white/5 border border-white/5 rounded-xl p-3 my-4 space-y-2">
+                        <div class="flex justify-between items-center text-sm text-neutral-400">
+                            <span>Standard Plain</span>
+                            <span class="font-semibold text-white">₵150</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm pt-2 border-t border-dashed border-white/5 text-neutral-400">
+                            <span>With Customization</span>
+                            <span class="font-semibold text-customHighlight">₵180</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <select id="rm-size" class="w-full bg-[#0d0f12] border border-white/10 rounded-xl p-3 text-xs focus:border-electricBlue text-white outline-none">
+                        <option value="S">Size S</option>
+                        <option value="M" selected>Size M</option>
+                        <option value="L">Size L</option>
+                        <option value="XL">Size XL</option>
+                    </select>
+                    <button type="button" onclick="orderViaWhatsApp('Real Madrid Kit', 'rm-size')" class="w-full bg-white hover:bg-neutral-200 text-darkBg font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                        <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i>
+                        <span>Place Order</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="jersey-card bg-darkCard border border-white/5 p-6 rounded-2xl relative group flex flex-col justify-between transition-all duration-300 hover:border-white/10 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                <div>
+                    <div class="h-80 w-full flex items-center justify-center relative overflow-hidden bg-[#1a1f26] rounded-xl border border-white/5">
+                        <img id="rm-img" src="madrid.jpg" class="jersey-img object-contain h-72 w-full p-4" alt="Real Madrid Jersey">
+                    </div>
+                    <h3 class="font-heading text-2xl tracking-wide mt-4">Real Madrid Kit</h3>
+                    
+                    <div class="bg-white/5 border border-white/5 rounded-xl p-3 my-4 space-y-2">
+                        <div class="flex justify-between items-center text-sm text-neutral-400">
+                            <span>Standard Plain</span>
+                            <span class="font-semibold text-white">₵150</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm pt-2 border-t border-dashed border-white/5 text-neutral-400">
+                            <span>With Customization</span>
+                            <span class="font-semibold text-customHighlight">₵180</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <select id="rm-size" class="w-full bg-[#0d0f12] border border-white/10 rounded-xl p-3 text-xs focus:border-electricBlue text-white outline-none">
+                        <option value="S">Size S</option>
+                        <option value="M" selected>Size M</option>
+                        <option value="L">Size L</option>
+                        <option value="XL">Size XL</option>
+                    </select>
+                    <button type="button" onclick="orderViaWhatsApp('Real Madrid Kit', 'rm-size')" class="w-full bg-white hover:bg-neutral-200 text-darkBg font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                        <i class="fa-brands fa-whatsapp text-base text-emerald-600"></i>
+                        <span>Place Order</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="custom-studio" class="py-20 bg-black/40 border-y border-white/5 px-4 lg:px-8">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="bg-darkBg border border-premiumGold/20 p-8 rounded-2xl relative overflow-hidden flex flex-col items-center justify-center min-h-[400px]">
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#1a1f26] via-transparent to-transparent"></div>
+                
+                <div class="relative w-full text-center space-y-2 z-10 pointer-events-none select-none">
+                    <div class="text-neutral-600 text-xs font-mono tracking-widest mb-10">[ REAR PRINT MOCKUP ]</div>
+                    <div id="mock-name" class="font-heading text-4xl sm:text-5xl tracking-widest text-white uppercase drop-shadow-md">YOUR NAME</div>
+                    <div id="mock-number" class="font-heading text-[120px] sm:text-[150px] leading-none text-premiumGold font-black drop-shadow-xl">10</div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div>
+                    <span class="text-customHighlight font-bold text-xs tracking-wider uppercase block mb-1">Tailored To Order</span>
+                    <h2 class="font-heading text-4xl sm:text-5xl tracking-wide">CUSTOM PRINT ENGINE</h2>
+                    <p class="text-sm text-neutral-400 mt-2">
+                        Specify details to flash print crisp premium custom vinyl namesets and iconic numbering straight to your delivery order.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs uppercase text-neutral-400 mb-2 font-bold tracking-wider">Select Base Silhouette</label>
+                        <select id="custom-kit-select" class="w-full bg-darkCard border border-white/10 rounded-xl p-3 text-sm text-white focus:border-premiumGold outline-none">
+                            <option value="Chelsea Kit">Chelsea Kit</option>
+                            <option value="Ghana National Kit">Ghana National Kit</option>
+                            <option value="Real Madrid Kit">Real Madrid Kit</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="col-span-2">
+                            <label class="block text-xs uppercase text-neutral-400 mb-2 font-bold tracking-wider">Custom Printing Name</label>
+                            <input type="text" id="input-name" maxlength="15" placeholder="e.g. MICKY" oninput="updateMockup()" class="w-full bg-darkCard border border-white/10 rounded-xl p-3 text-sm text-white placeholder-neutral-600 focus:border-electricBlue outline-none uppercase">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase text-neutral-400 mb-2 font-bold tracking-wider">Number</label>
+                            <input type="number" id="input-number" max="99" min="1" placeholder="10" oninput="updateMockup()" class="w-full bg-darkCard border border-white/10 rounded-xl p-3 text-sm text-white placeholder-neutral-600 focus:border-electricBlue outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase text-neutral-400 mb-2 font-bold tracking-wider">Select Physical Size</label>
+                        <div class="grid grid-cols-5 gap-2">
+                            <button type="button" onclick="selectStudioSize('S')" class="size-btn border border-white/10 bg-darkCard py-2.5 text-sm font-bold rounded-xl hover:border-electricBlue transition">S</button>
+                            <button type="button" onclick="selectStudioSize('M')" class="size-btn border border-electricBlue bg-darkCard text-electricBlue py-2.5 text-sm font-bold rounded-xl transition">M</button>
+                            <button type="button" onclick="selectStudioSize('L')" class="size-btn border border-white/10 bg-darkCard py-2.5 text-sm font-bold rounded-xl hover:border-electricBlue transition">L</button>
+                            <button type="button" onclick="selectStudioSize('XL')" class="size-btn border border-white/10 bg-darkCard py-2.5 text-sm font-bold rounded-xl hover:border-electricBlue transition">XL</button>
+                            <button type="button" onclick="selectStudioSize('XXL')" class="size-btn border border-white/10 bg-darkCard py-2.5 text-sm font-bold rounded-xl hover:border-electricBlue transition">XXL</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" onclick="triggerCustomWhatsAppOrder()" class="w-full bg-gradient-to-r from-premiumGold to-yellow-600 hover:from-white hover:to-white text-black font-extrabold tracking-wider uppercase py-4 rounded-xl shadow-lg transition-all flex items-center justify-center space-x-3 mt-6">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Generate Custom Order to WhatsApp</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-black/60 border-t border-white/5 text-neutral-500 text-xs">
+        <div class="bg-gradient-to-r from-darkBg via-darkCard to-darkBg border-b border-premiumGold/20 py-6 px-4 text-center">
+            <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-white">
+                <div class="flex items-center space-x-2 font-semibold text-sm text-neutral-400">
+                    <span class="text-premiumGold text-base"><i class="fa-solid fa-location-dot"></i></span>
+                    <span>Sunyani, Ghana</span>
+                </div>
+                <div class="font-heading tracking-widest text-lg text-premiumGold">AUTHENTIC CRAFT MATRIX</div>
+                <div class="flex items-center space-x-2 font-semibold text-sm text-neutral-400">
+                    <span class="text-emerald-400 text-base"><i class="fa-brands fa-whatsapp"></i></span>
+                    <a href="https://wa.me/233257656450" target="_blank" class="hover:underline">0257656450</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Micky Kits. Curated Styles. Local Mobile Money (MoMo) & Nationwide Gateways Supported.</p>
+            <div class="flex space-x-4 text-sm text-neutral-400">
+                <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-white"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-white"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="md:hidden fixed bottom-0 inset-x-0 bg-darkCard/90 backdrop-blur-md border-t border-white/5 py-2 px-6 flex justify-around items-center z-50 shadow-2xl">
+        <a href="#home" class="flex flex-col items-center text-neutral-400 hover:text-white transition">
+            <i class="fa-solid fa-house text-lg"></i>
+            <span class="text-[10px] mt-0.5">Home</span>
+        </a>
+        <a href="#collection" class="flex flex-col items-center text-neutral-400 hover:text-white transition">
+            <i class="fa-solid fa-shirt text-lg"></i>
+            <span class="text-[10px] mt-0.5">Collection</span>
+        </a>
+        <a href="#custom-studio" class="flex flex-col items-center text-premiumGold transition">
+            <i class="fa-solid fa-wand-magic-sparkles text-lg"></i>
+            <span class="text-[10px] mt-0.5">Custom Studio</span>
+        </a>
+        <a href="https://wa.me/233257656450" class="flex flex-col items-center text-emerald-400 transition">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span class="text-[10px] mt-0.5">WhatsApp Chat</span>
+        </a>
+    </div>
+
+    <script>
+        let selectedStudioSizeGlobal = "M";
+        const WHATSAPP_NUMBER = "233257656450";
+
+        // Standard Order Dispatch Engine
+        function orderViaWhatsApp(jerseyName, sizeSelectId) {
+            const sizeElement = document.getElementById(sizeSelectId);
+            const selectedSize = sizeElement ? sizeElement.value : 'M';
+            const message = `Hi, I want to order the [${jerseyName}], Size: [${selectedSize}], Print Type: [Standard Plain Customization].`;
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // Live Real-Time Studio Mockup Processing
+        function updateMockup() {
+            const nameInput = document.getElementById('input-name').value;
+            let numberInput = document.getElementById('input-number').value;
+
+            // Constrain layout to two digits maximum
+            if (numberInput.length > 2) {
+                numberInput = numberInput.slice(0, 2);
+                document.getElementById('input-number').value = numberInput;
+            }
+
+            document.getElementById('mock-name').innerText = nameInput.trim() !== "" ? nameInput.toUpperCase() : "YOUR NAME";
+            document.getElementById('mock-number').innerText = numberInput.trim() !== "" ? numberInput : "10";
+        }
+
+        // Size Button Selector Array Engine
+        function selectStudioSize(size) {
+            selectedStudioSizeGlobal = size;
+            document.querySelectorAll('.size-btn').forEach(btn => {
+                if (btn.innerText === size) {
+                    btn.classList.remove('border-white/10', 'text-white');
+                    btn.classList.add('border-electricBlue', 'text-electricBlue');
+                } else {
+                    btn.classList.remove('border-electricBlue', 'text-electricBlue');
+                    btn.classList.add('border-white/10', 'text-white');
+                }
+            });
+        }
+
+        // Custom Vinyl Design Dispatch Routing
+        function triggerCustomWhatsAppOrder() {
+            const baseKit = document.getElementById('custom-kit-select').value;
+            const customName = document.getElementById('input-name').value.trim() || 'None';
+            const customNumber = document.getElementById('input-number').value.trim() || 'None';
+            const message = `Hi, I want to order the [${baseKit}], Size: [${selectedStudioSizeGlobal}], Custom Name: [${customName}], Number: [${customNumber}].`;
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
